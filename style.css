@@ -254,11 +254,16 @@ i {
     width: 100%;
     margin: auto;
 }
-.projectExample p strong {
+
+.projectExample p, .projectExample i {
+    display:none;
+}
+.projectExample:hover p strong {
     font-size: 1.5vw;
 }
 
-.projectExample p {
+.projectExample:hover p {
+    display : inline-block;
     background: rgba(112,88,42, 0.8);
     width: 90%;
     position: absolute;
@@ -268,7 +273,8 @@ i {
     color: white;
     font-size: 1vw;
 }
-.projectExample i {
+
+.projectExample:hover i {
     display: inline-flex;
     justify-content: center;
     color: white;
