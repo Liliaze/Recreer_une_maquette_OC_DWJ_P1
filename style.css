@@ -1,0 +1,371 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    url('fonts/fontawesome-webfont.svg') format('svg');
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto-Regular, Georgia, Arial, serif; /*essai a suprrimer ensuite*/
+    font-size:1vw;
+    min-font-size: 0.5vw;
+    text-align: justify;
+    height: auto;
+}
+
+h1 {
+    font-size: 3vw;
+    font-weight: bold;
+}
+h1, h1 + p {
+    text-align: center;
+}
+
+/*============================= HEADER ==================================*/
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 90px;
+}
+
+header div {
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+#logo {
+    width: 30%;
+    max-width: 300px;
+    min-width: 200px;
+    margin: auto;
+}
+
+nav {
+    margin: auto;
+}
+
+ul {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+nav ul {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+a:link, nav ul li a:visited
+{
+    color: #7b7b7b;
+    text-decoration:none;
+}
+nav ul li:hover a {
+    color: #656565;
+}
+
+nav ul li {
+    margin: 0px;
+    padding: 25px 15px 25px 15px;
+}
+nav ul li:hover {
+    border-top: #5babd1 3px solid;
+}
+
+/*============================= SECTIONS ==================================*/
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+/*========================= ACCUEIL - SLIDER =================================*/
+
+#accueil h1 {
+    display: none;
+}
+
+#accueil {
+    margin-top:90px;
+    position: relative;
+}
+
+#accueil img {
+    width: 99.9%;
+    height: 100%;
+}
+
+#accueil #textOnSlider {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 99.9%;
+    font-size: 3vw;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 0;
+    align-items: center;
+
+}
+#accueil p {
+    color: white;
+}
+#pSlider {
+    text-align: left;
+    flex:0.8;
+}
+#accueil strong {
+    color: #5babd1;
+}
+#pushLine {
+    font-size: 1vw;
+    font-style: normal;
+}
+button, #contactSubmit {
+    color:white;
+    font-size: 1vw;
+    width: auto;
+    margin: auto;
+    padding: 6px;
+    font-weight: bold;
+    background-color: rgb(92, 173, 211);
+    border-radius: 3px;
+    border: 0px;
+    border-bottom: rgb(70, 144,180) 2px solid;
+}
+
+#ltBackground, #gtBackground{
+    color: white;
+    border: solid 0px;
+    width:4vw;
+    height: 2vw;
+    border-radius: 8vw 8vw 0% 0%;
+    background-color: #424246;
+    display: flex;
+    vertical-align: baseline;
+}
+
+#lt, #gt {
+    font-style: normal;
+    margin: auto;
+}
+
+#ltBackground {
+    margin-left: -1vw;
+    transform:rotate(90deg);
+}
+
+#gtBackground {
+    margin-right: -1vw;
+    transform:rotate(-90deg);
+}
+
+/* ============================= SERVICES ========================*/
+
+#services {
+    margin: auto;
+    border: 3px pink solid;
+    width: 100%;
+}
+#services div {
+    display: flex;
+    width: 100%;
+}
+#services div:nth-child(1) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#services div:nth-child(2) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#services img {
+    width: 49%;
+    min-width: 300px;
+    max-width: 600px;
+    margin: auto;
+}
+
+#services ul {
+    width: 49%;
+}
+
+#services li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    min-font-size: 1vw;
+}
+
+i {
+    font-size: 2vw;
+    width: 10%;
+}
+
+#services li p {
+    width:90%;
+    text-align: left;
+}
+
+/*============================ PROJETS ========================*/
+
+#projectList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px blue solid;
+}
+.projectExample {
+    width: 20%;
+    min-width: 300px;
+    position: relative;
+    border: 1px blue solid;
+    margin: 2%;
+}
+.projectExample img{
+    width: 100%;
+    margin: auto;
+}
+.projectExample p strong {
+    font-size: 1.5vw;
+}
+
+.projectExample p {
+    background: rgba(112,88,42, 0.8);
+    width: 90%;
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    padding: 5%;
+    color: white;
+    font-size: 1vw;
+}
+.projectExample i {
+    display: inline-flex;
+    justify-content: center;
+    color: white;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    border: 1px white solid;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 26%;
+    left: 75%;
+    background: #5babd1;
+}
+
+#projectMenu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*===============================CONTACT=========================*/
+#contact {
+    position: relative;
+    width: 100%;
+    height: 550px;
+}
+#map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    frameborder="0";
+    scrolling="no";
+    marginheight="0";
+    marginwidth="0";
+    z-index: 3;
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+}
+
+#blueEffect {
+    background-color: rgb(200,226,237);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    z-index: 3;
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+}
+
+#form
+{
+    z-index:9;
+    position:absolute;
+    width: 25%;
+    height: 475px;
+    top: 5%;
+    right: 10%;
+}
+
+form {
+    z-index:9;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.65);
+    padding: 3%;
+}
+
+form h2 {
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    background-color: white;
+    width: 90%;
+    margin: 8px 5px 8px 5px;
+    padding: 2%;
+}
+
+form strong {
+    font-weight: bold;
+}
+
+#contactSubmit {
+    margin: 5px 5px 5px 5px;
+    padding: 1%;
+}
