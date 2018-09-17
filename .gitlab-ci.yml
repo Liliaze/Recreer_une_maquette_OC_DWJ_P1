@@ -1,0 +1,12 @@
+pages:
+  script:
+  - mkdir public
+  - mv fonts public
+  - mv images public
+  - mv style.css public
+  - mv index.html public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
