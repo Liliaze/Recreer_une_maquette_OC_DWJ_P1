@@ -2,7 +2,6 @@
     font-family: 'robotoregular';
     src:    url('fonts/Roboto-Regular-webfont.eot');
     src:    url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-            url('fonts/Roboto-Regular-webfont.woff2') format('woff2'),
             url('fonts/Roboto-Regular-webfont.woff') format('woff'),
             url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
             url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
@@ -17,7 +16,6 @@ body {
     align-items: center;
     font-family: robotoregular, Georgia, Arial, serif; /*essai a suprrimer ensuite*/
     font-size:1vw;
-    min-font-size: 0.5vw;
     text-align: justify;
     height: auto;
 }
@@ -247,7 +245,6 @@ button, #contactSubmit {
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
-    min-font-size: 1vw;
 }
 
 i {
@@ -264,8 +261,9 @@ i {
 
 #projectList {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 .projectExample {
@@ -275,33 +273,42 @@ i {
     margin: 2%;
 }
 .projectExample img{
+    vertical-align: bottom;
     width: 100%;
-    margin: auto;
+    height: auto;
 }
 
-.projectExample p, .projectExample i {
-    display:none;
+.projectExample figcaption, .projectExample i {
+    overflow: hidden;
+    transition: all 0.7s;
 }
-.projectExample:hover p strong {
-    font-size: 1.5vw;
+.projectExample strong {
+    font-size: 1.2vw;
 }
-
-.projectExample:hover p {
-    display : inline-block;
-    background: rgba(112,88,42, 0.8);
-    width: 90%;
+.projectExample figcaption {
+    background: black;
+    background: rgba(0,0,0, 0);
+    width: 95%;
     position: absolute;
     bottom: 0px;
-    margin: auto;
-    padding: 5%;
+    padding-left: 5%;
     color: white;
-    font-size: 1.1vw;
+    color: rgba(255,255,255, 0);
+    font-size: 1vw;
 }
 
-.projectExample:hover i {
+.projectExample:hover figcaption, .projectExample:focus figcaption {
+    background: black;
+    background: rgba(0,0,0, 0.6);
+    color: white;
+    color: rgba(255,255,255, 1);
+}
+
+.projectExample i {
     display: inline-flex;
     justify-content: center;
     color: white;
+    color: rgba(255,255,255, 0);
     padding: 0px;
     width: 40px;
     height: 40px;
@@ -309,11 +316,20 @@ i {
     text-align: center;
     align-items: center;
     border: 1px white solid;
+    border: 1px rgba(255,255,255, 0) solid;
     border-radius: 100%;
     position: absolute;
-    bottom: 26%;
-    left: 75%;
-    background: #5babd1;
+    bottom: 28%;
+    left: 85%;
+    background: rgb(91, 171, 209);
+    background: rgba(91, 171, 209, 0);
+}
+.projectExample:hover i, .projectExample:focus i {
+    background: rgb(91, 171, 209);
+    background: rgba(91, 171, 209, 1);
+    border: 1px white solid;
+    border: 1px rgba(255,255,255, 1) solid;
+    color: rgba(255,255,255, 1);
 }
 
 #projectMenu {
@@ -340,10 +356,6 @@ i {
 iframe {
     width: 100%;
     height: 100%;
-    frameborder="0";
-    scrolling="no";
-    marginheight="0";
-    marginwidth="0";
     z-index: 3;
     opacity: 0.70;
     filter: alpha(opacity=70);
@@ -364,7 +376,7 @@ iframe {
 {
     z-index:9;
     position:absolute;
-    width: 25%;
+    width: 325px;
     height: 475px;
     top: 5%;
     right: 10%;
