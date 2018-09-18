@@ -1,7 +1,13 @@
 @font-face {
-    font-family: 'Roboto-Regular';
-    src: url('fonts/Roboto-Regular.ttf') format('truetype');
-    url('fonts/fontawesome-webfont.svg') format('svg');
+    font-family: 'robotoregular';
+    src:    url('fonts/Roboto-Regular-webfont.eot');
+    src:    url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+            url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+            url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+            url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -9,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Roboto-Regular, Georgia, Arial, serif; /*essai a suprrimer ensuite*/
+    font-family: robotoregular, Georgia, Arial, serif; /*essai a suprrimer ensuite*/
     font-size:1vw;
     min-font-size: 0.5vw;
     text-align: justify;
@@ -20,9 +26,30 @@ h1 {
     font-size: 3vw;
     font-weight: bold;
 }
-h1, h1 + p {
+h1, h1 + div + p {
     text-align: center;
 }
+.underH1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+.hrleft, .hrright {
+    margin: 0px;
+    color: #eeeeee;
+    width: 5%;
+    text-align: center;
+}
+.underH1 i {
+    color: #5babd1;
+    font-size: 0.8vw;
+    width: auto;
+    margin: 2px;
+}
+
 
 /*============================= HEADER ==================================*/
 header {
@@ -184,7 +211,6 @@ button, #contactSubmit {
 
 #services {
     margin: auto;
-    border: 3px pink solid;
     width: 100%;
 }
 #services div {
@@ -241,13 +267,11 @@ i {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px blue solid;
 }
 .projectExample {
     width: 20%;
     min-width: 300px;
     position: relative;
-    border: 1px blue solid;
     margin: 2%;
 }
 .projectExample img{
@@ -271,7 +295,7 @@ i {
     margin: auto;
     padding: 5%;
     color: white;
-    font-size: 1vw;
+    font-size: 1.1vw;
 }
 
 .projectExample:hover i {
