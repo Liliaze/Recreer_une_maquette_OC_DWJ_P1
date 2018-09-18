@@ -15,14 +15,15 @@ body {
     justify-content: center;
     align-items: center;
     font-family: robotoregular, Georgia, Arial, serif; /*essai a suprrimer ensuite*/
-    font-size:1vw;
+    font-size: calc(8px + 0.8vw);
     text-align: justify;
     height: auto;
 }
 
 h1 {
-    font-size: 3vw;
+    font-size: calc(16px + 2vw);
     font-weight: bold;
+    margin-bottom: 10px;
 }
 h1, h1 + div + p {
     text-align: center;
@@ -33,7 +34,6 @@ h1, h1 + div + p {
     justify-content: center;
     justify-items: center;
     align-items: center;
-    width: 100%;
 }
 .hrleft, .hrright {
     margin: 0px;
@@ -53,15 +53,12 @@ h1, h1 + div + p {
 header {
     position: fixed;
     z-index: 10;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 90px;
 }
-
 header div {
-    width: 100%;
     height: 90px;
     background-color: white;
     display: flex;
@@ -73,8 +70,8 @@ header div {
 
 #logo {
     width: 30%;
-    max-width: 300px;
-    min-width: 200px;
+    max-width: 400px;
+    min-width: 180px;
     margin: auto;
 }
 
@@ -82,16 +79,14 @@ nav {
     margin: auto;
 }
 
-ul {
+nav ul {
     display: flex;
     margin: auto;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style-type: none;
-}
-
-nav ul {
     flex-direction: row;
-    justify-content: left;
+    justify-content: start;
+    justify-items: start;
     align-items: center;
 }
 a:link, nav ul li a:visited
@@ -104,17 +99,17 @@ nav ul li:hover a {
 }
 
 nav ul li {
-    margin: 0px;
-    padding: 25px 15px 25px 15px;
+    margin: 0;
+    padding: 15px 15px 5px 0px;
+    border-top: white 2px solid;
 }
 nav ul li:hover {
-    border-top: #5babd1 3px solid;
+    border-top: #5babd1 2px solid;
 }
 
 /*============================= SECTIONS ==================================*/
 
 section {
-    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -133,16 +128,17 @@ section {
 }
 
 #accueil img {
-    width: 99.9%;
+    width: 100%;
     height: 100%;
+    min-width:350px;
 }
 
 #accueil #textOnSlider {
     position: absolute;
-    top: 0px;
+    top: 0;
     width: 100%;
-    height: 99.9%;
-    font-size: 3vw;
+    height: 99%;
+    font-size: calc(8px + 2vw);
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -163,25 +159,27 @@ section {
     color: #5babd1;
 }
 #pushLine {
-    font-size: 1vw;
+    font-size: calc(6px + 0.5vw);
+    margin:0;
+    padding:0;
     font-style: normal;
 }
 button, #contactSubmit {
     color:white;
-    font-size: 1vw;
+    font-size: calc(6px + 0.5vw);
     width: auto;
     margin: auto;
     padding: 6px;
     font-weight: bold;
     background-color: rgb(92, 173, 211);
     border-radius: 3px;
-    border: 0px;
+    border: 0;
     border-bottom: rgb(70, 144,180) 2px solid;
 }
 
 #ltBackground, #gtBackground{
     color: white;
-    border: solid 0px;
+    border: solid 0;
     width:4vw;
     height: 2vw;
     border-radius: 8vw 8vw 0% 0%;
@@ -192,6 +190,7 @@ button, #contactSubmit {
 
 #lt, #gt {
     font-style: normal;
+    font-size: 2vw;
     margin: auto;
 }
 
@@ -207,10 +206,6 @@ button, #contactSubmit {
 
 /* ============================= SERVICES ========================*/
 
-#services {
-    margin: auto;
-    width: 100%;
-}
 #services div {
     display: flex;
     width: 100%;
@@ -228,14 +223,14 @@ button, #contactSubmit {
 }
 
 #services img {
-    width: 49%;
+    width: 40%;
     min-width: 300px;
     max-width: 600px;
     margin: auto;
 }
 
 #services ul {
-    width: 49%;
+    width: 60%;
 }
 
 #services li {
@@ -244,17 +239,38 @@ button, #contactSubmit {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
-i {
-    font-size: 2vw;
-    width: 10%;
+#iconS1, #iconS2, #iconS3 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    position: relative;
+    text-align: center;
+    border: #e6e6e6 2px  solid;
+    border-radius: 100%;
+    color: #5babd1;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    margin:5px;
+    padding:0;
+}
+
+#services ul i i {
+    position: absolute;
+    right: -6px;
+    font-size: 10px;
+    border: 2px solid white;
+    border-radius: 100%;
 }
 
 #services li p {
-    width:90%;
+    width:85%;
     text-align: left;
+    margin-left: 10px;
 }
 
 /*============================ PROJETS ========================*/
@@ -283,7 +299,7 @@ i {
     transition: all 0.7s;
 }
 .projectExample strong {
-    font-size: 1.2vw;
+    font-size: calc(10px + 1vw);
 }
 .projectExample figcaption {
     background: black;
@@ -294,7 +310,7 @@ i {
     padding-left: 5%;
     color: white;
     color: rgba(255,255,255, 0);
-    font-size: 1vw;
+    font-size: calc(8px + 0.6vw);
 }
 
 .projectExample:hover figcaption, .projectExample:focus figcaption {
@@ -392,7 +408,7 @@ form {
 }
 
 form h2 {
-    font-size: 1.4vw;
+    font-size: calc(12px + 1.1vw);
     font-weight: bold;
 }
 
