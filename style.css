@@ -20,9 +20,9 @@ body {
     height: auto;
 }
 
-section {
-    padding-top: 100px;
-    margin-top: -100px;
+section{
+    padding-top: 90px;
+    margin-top: -90px;
 }
 
 h1 {
@@ -48,7 +48,7 @@ h1, h1 + div + p {
 }
 .underH1 i {
     color: #5babd1;
-    font-size: 0.8vw;
+    font-size: calc(8px + 0.8vw);
     width: auto;
     margin: 2px;
 }
@@ -256,7 +256,6 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 5%;
     position: relative;
     text-align: center;
     border: #e6e6e6 2px  solid;
@@ -285,40 +284,57 @@ section {
 
 /*============================ PROJETS ========================*/
 
-#projectMenu ul{
-    list-style-type: none;
-    text-decoration:none;
+#projectMenu{
     display: flex;
-    width:30%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 18px;
 }
 
-#projectMenu li {
+#projectMenu div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     position: relative;
-    flex-grow: 1;
     margin: 0;
 }
 
 #projectMenu button {
-    width: 100%;
-    color:white;
-    font-size: calc(6px + 0.5vw);
+    text-rendering: auto;
+    text-align: center;
+    color: #64686d;
+    font-size: calc(8px + 0.8vw);
     margin: 0;
     padding: 10px;
     font-weight: bold;
-    background-color: rgb(92, 173, 211);
-    border: 0;
-    border-bottom: rgb(70, 144,180) 2px solid;
+    background-color: #e5e5e5;
+    border: transparent 2px solid;
+    border-bottom: transparent 2px solid;
     border-radius: 0;
 }
 
-#projectMenu li:nth-child(1) button {
+#projectMenu div:nth-child(1) button {
+    color:white;
     border-radius: 10% 0 0 10%;
+    border-bottom: #468cad 2px solid;
+    background-color: #5cadd3;
 }
+#projectMenu div:nth-child(1) .arrowProjectMenu {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 100%;
+    left: calc(50% - 12px);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: #3491b2 12px solid ;
+ }
 
-#projectMenu li:nth-child(4) button{
+#projectMenu div:nth-child(4) button{
     border-radius: 0 10% 10% 0;
 }
 
@@ -327,8 +343,9 @@ section {
 }
 
 #projectMenu button:hover {
-    background-color: #3491b2;
-    border: 1px solid #3491b2;
+    color:white;
+    border-bottom: #468cad 2px solid;
+    background-color: #5cadd3;
 }
 
 .arrowProjectMenu{
@@ -430,7 +447,8 @@ section {
 #map {
     position: relative;
     width: 90vw;
-    height: 75vh;
+    height: 80vh;
+    margin-bottom: 5vh;
 }
 
 iframe {
@@ -461,7 +479,6 @@ form
     top: 5%;
     right: 5%;
     width: 325px;
-    height: 480px;
     background-color: rgba(255,255,255,0.65);
     padding: 20px;
 }
