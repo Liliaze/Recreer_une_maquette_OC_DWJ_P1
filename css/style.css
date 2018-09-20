@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'robotoregular';
-    src:    url('fonts/Roboto-Regular-webfont.eot');
-    src:    url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-            url('fonts/Roboto-Regular-webfont.woff') format('woff'),
-            url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
-            url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    src:    url('../fonts/Roboto-Regular-webfont.eot');
+    src:    url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+            url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+            url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -15,14 +15,14 @@ body {
     justify-content: center;
     align-items: center;
     font-family: robotoregular, Georgia, Arial, serif; /*essai a suprrimer ensuite*/
-    font-size: calc(8px + 0.8vw);
+    font-size: calc(8px + 0.6vw);
     text-align: justify;
     height: auto;
 }
 
 section{
-    padding-top: 90px;
-    margin-top: -90px;
+    padding-top: 85px;
+    margin-top: -85px;
 }
 
 h1 {
@@ -61,12 +61,12 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 90px;
     border-bottom: 1px solid #5babd1;
 }
 
 header div {
-    height: 100px;
+    height: 90px;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -77,8 +77,8 @@ header div {
 
 #logo {
     width: 30%;
-    max-width: 400px;
-    min-width: 180px;
+    max-width: 380px;
+    min-width: 150px;
     margin: auto;
 }
 
@@ -107,7 +107,7 @@ nav ul li:hover a {
 
 nav ul li {
     margin: 0;
-    padding: 15px 15px 5px 0px;
+    padding: 10px 15px 5px 15px;
     border-top: white 2px solid;
 }
 nav ul li:hover {
@@ -129,7 +129,7 @@ section {
     display: none;
 }
 
-#accueil {
+#accueil div{
     position: relative;
 }
 
@@ -142,9 +142,8 @@ section {
 #accueil #textOnSlider {
     position: absolute;
     top: 0;
-    margin-top: 100px;
     width: 100%;
-    height: 80%;
+    height: 100%;
     font-size: calc(8px + 2vw);
     font-weight: bold;
     display: flex;
@@ -165,17 +164,17 @@ section {
     color: #5babd1;
 }
 #pushLine {
-    font-size: calc(6px + 0.5vw);
+    font-size: calc(8px + 0.3vw);
     margin:0;
     padding:0;
     font-style: normal;
 }
 #accueil button, #contactSubmit {
     color:white;
-    font-size: calc(6px + 0.5vw);
+    font-size: calc(8px + 0.3vw);
     width: auto;
     margin: auto;
-    padding: 6px;
+    padding: 3px;
     font-weight: bold;
     background-color: rgb(92, 173, 211);
     border-radius: 3px;
@@ -283,6 +282,9 @@ section {
 }
 
 /*============================ PROJETS ========================*/
+#portfolio {
+    background-color: #f5f5f5;
+}
 
 #projectMenu{
     display: flex;
@@ -377,7 +379,6 @@ section {
 .projectExample img{
     vertical-align: bottom;
     width: 100%;
-    height: auto;
 }
 
 .projectExample figcaption, .projectExample i {
@@ -392,7 +393,7 @@ section {
     background: rgba(0,0,0, 0);
     width: 95%;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     padding-left: 5%;
     color: white;
     color: rgba(255,255,255, 0);
@@ -407,22 +408,21 @@ section {
 }
 
 .projectExample i {
+    position: absolute;
+    bottom: calc(18px + 3.6vw);
+    left: 85%;
     display: inline-flex;
     justify-content: center;
     color: white;
     color: rgba(255,255,255, 0);
-    padding: 0px;
+    padding: 0;
     width: 40px;
     height: 40px;
     font-size: 15px;
     text-align: center;
     align-items: center;
-    border: 1px white solid;
-    border: 1px rgba(255,255,255, 0) solid;
+    border: 1px transparent solid;
     border-radius: 100%;
-    position: absolute;
-    bottom: 28%;
-    left: 85%;
     background: rgb(91, 171, 209);
     background: rgba(91, 171, 209, 0);
 }
@@ -430,7 +430,6 @@ section {
     background: rgb(91, 171, 209);
     background: rgba(91, 171, 209, 1);
     border: 1px white solid;
-    border: 1px rgba(255,255,255, 1) solid;
     color: rgba(255,255,255, 1);
 }
 
@@ -446,8 +445,8 @@ section {
 /*===============================CONTACT=========================*/
 #map {
     position: relative;
-    width: 90vw;
-    height: 80vh;
+    width: 95vw;
+    height: 85vh;
     margin-bottom: 5vh;
 }
 
@@ -478,9 +477,9 @@ form
     position:absolute;
     top: 5%;
     right: 5%;
-    width: 325px;
+    width: 320px;
     background-color: rgba(255,255,255,0.65);
-    padding: 20px;
+    padding: 15px;
 }
 
 #formTitle {

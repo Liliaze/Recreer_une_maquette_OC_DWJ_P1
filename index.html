@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" media="all and (max-width: 900px)" href="css/little_screen.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <title>WEBAGENCY</title>
 </head>
@@ -25,16 +26,18 @@
 <!--=============== SECTION 1 ======================-->
 <section id="accueil">
     <h1>ACCUEIL</h1>
-    <img src="./images/slider/bg1.jpg" alt="little girl with colors on finger"/>
-    <div id="textOnSlider">
-        <p id="ltBackground"><i id="lt" class="fas fa-angle-down"></i></p>
-        <p id="pSlider">
-            <strong>WEBAGENCY</strong> : L'AGENCE DE TOUS<br>
-            VOS PROJETS!<br>
-            <em id="pushLine">Vous avez un projet web ? La WebAgency vous aide à le réaliser!</em><br>
-            <button>Plus d'infos</button>
-        </p>
-        <p id="gtBackground"><i id="gt" class="fas fa-angle-down"></i></p>
+    <div>
+        <img src="./images/slider/bg1.jpg" alt="little girl with colors on finger"/>
+        <div id="textOnSlider">
+            <p id="ltBackground"><i id="lt" class="fas fa-angle-down"></i></p>
+            <p id="pSlider">
+                <strong>WEBAGENCY</strong> : L'AGENCE DE TOUS<br>
+                VOS PROJETS!<br>
+                <em id="pushLine">Vous avez un projet web ? La WebAgency vous aide à le réaliser!</em><br>
+                <button>Plus d'infos</button>
+            </p>
+            <p id="gtBackground"><i id="gt" class="fas fa-angle-down"></i></p>
+        </div>
     </div>
 </section>
 
@@ -143,16 +146,16 @@
     <div id="map">
         <span id="blueEffect"> </span>
         <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=2.3484724760055546%2C48.87226609034044%2C2.352012991905213%2C48.87388736016615&amp;layer=mapnik"></iframe>
-        <form>
+        <form method="post">
             <p id="formTitle">Contact Info</p>
             <p><strong>WebAgency SAS</strong><br/>
             25 Rue d'Hauteville 75010 Paris<br/>
             <abbr title="Téléphone">Tel</abbr>: 01 02 03 04 05</p>
             <p>
-                <input id="inputName" type="text" placeholder="Name" name="Name"><br>
-                <input id="inputEmail" type="text" placeholder="Email" name="Email"><br>
-                <input id="inputSubject" type="text" placeholder="Subject"><br>
-                <textarea id="inputMessage" rows=6 placeholder="Message"></textarea><br>
+                <input id="Name" type="text" placeholder="Name" name="Name"><br>
+                <input id="Email" type="text" placeholder="Email" name="Email"><br>
+                <input id="Subject" type="text" placeholder="Subject" name="Subject"><br>
+                <textarea id="Message" rows=6 placeholder="Message" name="Message"></textarea><br>
                 <input id="contactSubmit" type="submit" value="Send Message">
             </p>
         </form>

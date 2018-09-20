@@ -1,0 +1,19 @@
+#map
+{
+    display: flex;
+    flex-direction: column;
+}
+
+iframe, #blueEffect
+{
+    display: block;
+    width: 93vw;
+    height: 80vh;
+    margin-bottom: 15px;
+}
+form
+{
+    left:0;
+    width: 90%;
+    margin-top : 80vh;
+}
