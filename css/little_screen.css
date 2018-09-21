@@ -4,17 +4,23 @@
     align-items: center;
     flex-wrap: wrap;
 }
+#accueil button {
+    padding : 5px;
+}
 
 #map
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 iframe, #blueEffect
 {
     display: block;
-    width: 93vw;
+    margin-top : 1vh;
+    width: 95vw;
     height: 80vh;
     margin-bottom: 15px;
 }
@@ -22,5 +28,12 @@ form
 {
     left:0;
     width: 90%;
-    margin-top : 80vh;
+    margin-top : 81vh;
+}
+
+#blueLine {
+    display: none;
+}
+#transparentLine {
+    display: none;
 }
