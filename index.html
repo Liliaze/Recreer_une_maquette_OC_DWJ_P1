@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" media="all and (max-width: 900px)" href="css/little_screen.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <title>WEBAGENCY</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" media="all and (min-width: 768px) and (max-width: 1024px)" href="css/medium_screen.css"/>
+    <link rel="stylesheet" media="all and (max-width: 768px)" href="css/little_screen.css"/>
+   <title>WEBAGENCY</title>
 </head>
 <!--================ HEADER =======================-->
 <body>
@@ -27,19 +28,19 @@
 <section id="accueil">
     <h1>ACCUEIL</h1>
     <div>
-        <img src="./images/slider/bg1.jpg" alt="little girl with colors on finger"/>
+        <img class="slider" src="./images/slider/bg1.jpg" alt="little girl with colors on finger"/>
         <div id="textOnSlider">
-            <div><span id="ltBackground"><i id="lt" class="fas fa-angle-left"></i></span></div>
+            <div class="slider"><span class="slider" id="ltBackground"><i id="lt" class="fas fa-angle-left"></i></span></div>
             <p id="pSlider">
                 <strong>WEBAGENCY</strong> : L'AGENCE DE TOUS<br>
                 VOS PROJETS!<br>
                 <em id="pushLine">Vous avez un projet web ? La WebAgency vous aide à le réaliser!</em><br>
                 <button>Plus d'infos</button>
             </p>
-            <div><span id="gtBackground"><i id="gt" class="fas fa-angle-right"></i></span></div>
+            <div class="slider" ><span class="slider" id="gtBackground"><i id="gt" class="fas fa-angle-right"></i></span></div>
         </div>
-        <div id="blueLine"></div>
-        <div id="transparentLine"></div>
+        <div class="slider" id="blueLine"></div>
+        <div class="slider" id="transparentLine"></div>
     </div>
 </section>
 
@@ -146,13 +147,11 @@
 <section id="contact">
     <h1>contact</h1>
     <div id="map">
-        <span id="blueEffect"> </span>
-        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=2.3484724760055546%2C48.87226609034044%2C2.352012991905213%2C48.87388736016615&amp;layer=mapnik"></iframe>
         <form method="post">
             <p id="formTitle">Contact Info</p>
             <p><strong>WebAgency SAS</strong><br/>
-            25 Rue d'Hauteville 75010 Paris<br/>
-            <abbr title="Téléphone">Tel</abbr>: 01 02 03 04 05</p>
+                25 Rue d'Hauteville 75010 Paris<br/>
+                <abbr title="Téléphone">Tel</abbr>: 01 02 03 04 05</p>
             <p>
                 <input id="Name" type="text" placeholder="Name" name="Name"><br>
                 <input id="Email" type="text" placeholder="Email" name="Email"><br>
@@ -161,6 +160,10 @@
                 <input id="contactSubmit" type="submit" value="Send Message">
             </p>
         </form>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2985079806776!2d2.3495247116323417!3d48.8715857265774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e169ff9c183%3A0xf587d1ddad00b564!2s10+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1537818558067"></iframe>
+            <span id="blueEffect"> </span>
+        </div>
     </div>
 </section>
 

@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: robotoregular, Georgia, Arial, serif; /*essai a suprrimer ensuite*/
-    font-size: calc(8px + 0.6vw);
+    font-size: calc(12px + 0.3vw);
     text-align: justify;
     height: auto;
 }
@@ -23,8 +23,9 @@ body {
 h1 {
     font-size: calc(16px + 2vw);
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 10px;
 }
+
 h1, h1 + div + p {
     text-align: center;
 }
@@ -43,7 +44,6 @@ h1, h1 + div + p {
 }
 .underH1 i {
     color: #5babd1;
-    font-size: calc(8px + 0.8vw);
     width: auto;
     margin: 2px;
 }
@@ -90,6 +90,7 @@ nav ul {
     justify-content: start;
     justify-items: start;
     align-items: center;
+    padding: 0;
 }
 a:link, nav ul li a:visited
 {
@@ -110,19 +111,16 @@ nav ul li:hover {
 }
 
 /*============================= SECTIONS ==================================*/
-
 section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    padding-top: 4.5em;
+    margin-top: -4.5em;
+    padding-bottom: -4em;
+    margin-bottom: 4em;
 }
-
-
 /*========================= ACCUEIL - SLIDER =================================*/
 
 #accueil {
-    padding-top : 200px;
-    margin-top: -100px;
+    margin-top: 100px;
 }
 #accueil h1 {
     display: none;
@@ -140,6 +138,7 @@ section {
     min-width:350px;
     margin:0;
     padding:0;
+    vertical-align: baseline;
 }
 
 #accueil #textOnSlider {
@@ -147,7 +146,7 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    font-size: calc(10px + 1.5vw);
+    font-size: calc(12px + 1.5vw);
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -167,7 +166,7 @@ section {
     color: #5babd1;
 }
 #pushLine {
-    font-size: calc(8px + 0.4vw);
+    font-size: calc(12px + 0.4vw);
     margin:0;
     padding:0;
     font-style: normal;
@@ -175,7 +174,7 @@ section {
 #accueil button {
     padding: 10px;
     color:white;
-    font-size: calc(8px + 0.3vw);
+    font-size: calc(12px + 0.4vw);
     width: auto;
     margin: auto;
     font-weight: bold;
@@ -216,7 +215,7 @@ section {
     z-index: 5;
     margin: 0;
     padding: 0;
-    bottom: 0.33vw;
+    bottom: 0.31vw;
     width : 10%;
     height: 0.3vw;
     background-color: #5cadd3;
@@ -224,7 +223,7 @@ section {
 #transparentLine {
     position: absolute;
     z-index: 4;
-    bottom: 0.33vw;
+    bottom: 0.31vw;
     margin: 0;
     padding: 0;
     width : 100%;
@@ -327,13 +326,12 @@ section {
     text-rendering: auto;
     text-align: center;
     color: #64686d;
-    font-size: calc(8px + 0.8vw);
+    font-size: calc(11px + 0.3vw);
     margin: 0;
-    padding: 10px;
+    padding: 8px;
     font-weight: bold;
     background-color: #e5e5e5;
     border: transparent 2px solid;
-    border-bottom: transparent 2px solid;
     border-radius: 0;
 }
 
@@ -405,7 +403,7 @@ section {
     transition: all 0.7s;
 }
 .projectExample strong {
-    font-size: calc(10px + 1vw);
+    font-size: calc(12px + 1vw);
 }
 .projectExample figcaption {
     background: black;
@@ -416,7 +414,7 @@ section {
     padding-left: 5%;
     color: white;
     color: rgba(255,255,255, 0);
-    font-size: calc(8px + 0.6vw);
+    font-size: calc(12px + 0.3vw);
 }
 
 .projectExample:hover figcaption, .projectExample:focus figcaption {
@@ -428,7 +426,7 @@ section {
 
 .projectExample i {
     position: absolute;
-    bottom: calc(18px + 3.6vw);
+    bottom: calc(34px + 2.6vw);
     left: 85%;
     display: inline-flex;
     justify-content: center;
@@ -470,41 +468,43 @@ section {
     position: relative;
     display : flex;
     width: 95vw;
-    height: 85vh;
-    margin-bottom: 5vh;
+    height: 600px;
     left :0;
 }
 
 iframe {
     margin: auto;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    border:0;
+    vertical-align: baseline;
+    width: 95vw;
+    height: 600px;
     top: 0;
     left :0;
-    z-index: 3;
+    z-index: 2;
     opacity: 0.60;
 }
 
 #blueEffect {
     margin: auto;
     position: absolute;
+    vertical-align: baseline;
     top: 0;
     left :0;
-    background-color: #c8e2ed;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+    background-color: rgba(201,226,250,0.4);
+    width: 95vw;
+    height: 600px;
+    z-index: 3;
 }
 
 form
 {
     z-index:4;
     position:absolute;
+    background-color: rgba(255,255,255,0.7);
     top: 5%;
     right: 5%;
-    width: 320px;
-    background-color: rgba(255,255,255,0.65);
+    width: 28%;
     padding: 15px;
 
 }
@@ -517,7 +517,6 @@ form
 }
 
 form strong {
-    font-size: calc(8px + 0.8vw);
     margin:0;
     padding:0;
 }
@@ -528,11 +527,9 @@ form input, form textarea {
     margin-bottom: 15px;
     padding: 3px 0 3px 2px;
     font-family: 'robotoregular', serif;
-    font-size: calc(6px + 0.6vw);
 }
 #contactSubmit {
     color:white;
-    font-size: calc(8px + 0.3vw);
     width: auto;
     margin: auto;
     padding: 3px;

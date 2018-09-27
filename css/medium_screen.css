@@ -1,0 +1,65 @@
+/* =============== SECTION ============== */
+section {
+    padding-top: 2em;
+    margin-top: -2em;
+    padding-bottom: -2em;
+    margin-bottom: 2em;
+}
+
+
+/* ========================= accueil - little screen =============== */
+
+#services div:nth-child(4) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* ========================= accueil - little screen =============== */
+
+#accueil button {
+    padding : 5px;
+}
+
+/* ========================= accueil - little screen =============== */
+
+#map {
+    position: static;
+    display : flex;
+    flex-direction: column;
+}
+#map div {
+    position: relative;
+}
+
+iframe {
+    position: static;
+    border:0;
+    vertical-align: baseline;
+}
+
+#blueEffect {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(201,226,250,0.4);
+    z-index: 3;
+}
+
+form
+{
+    position: static;
+    background-color: rgba(255,255,255,1);
+    width: 100%;
+    padding: 15px;
+}
+
+#formTitle {
+    font-size: calc(16px + 2vw);
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+
+form p {
+    text-align: center;
+}
