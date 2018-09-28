@@ -111,12 +111,8 @@ nav ul li:hover {
 }
 
 /*============================= SECTIONS ==================================*/
-section {
-    padding-top: 4.5em;
-    margin-top: -4.5em;
-    padding-bottom: -4em;
-    margin-bottom: 4em;
-}
+
+
 /*========================= ACCUEIL - SLIDER =================================*/
 
 #accueil {
@@ -383,7 +379,7 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -504,7 +500,7 @@ form
     background-color: rgba(255,255,255,0.7);
     top: 5%;
     right: 5%;
-    width: 28%;
+    width: 500px;
     padding: 15px;
 
 }

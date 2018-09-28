@@ -1,13 +1,6 @@
-/* =============== SECTION ============== */
-section {
-    padding-top: 2em;
-    margin-top: -2em;
-    padding-bottom: -2em;
-    margin-bottom: 2em;
-}
 
 
-/* ========================= accueil - little screen =============== */
+/* ========================= accueil - medium screen =============== */
 
 #services div:nth-child(4) {
     flex-direction: column;
@@ -15,32 +8,39 @@ section {
     align-items: center;
     flex-wrap: wrap;
 }
-/* ========================= accueil - little screen =============== */
+/* ========================= accueil - medium screen =============== */
 
 #accueil button {
     padding : 5px;
 }
 
-/* ========================= accueil - little screen =============== */
+/* ========================= accueil - medium screen =============== */
 
 #map {
     position: static;
     display : flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 #map div {
     position: relative;
+    height : 480px;
+    margin: 10px;
 }
 
 iframe {
     position: static;
     border:0;
-    vertical-align: baseline;
+    height: calc(100% - 10px);
+    margin: 5px;
 }
 
 #blueEffect {
     position: absolute;
-    bottom: 0;
+    top:0;
+    height: calc(100% - 10px);
+    margin: 5px;
     background-color: rgba(201,226,250,0.4);
     z-index: 3;
 }
@@ -49,8 +49,10 @@ form
 {
     position: static;
     background-color: rgba(255,255,255,1);
-    width: 100%;
+    width:calc(65vw - 30px);
+    height: 100%;
     padding: 15px;
+    z-index: 0;
 }
 
 #formTitle {
